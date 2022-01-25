@@ -69,11 +69,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         highlightIndex.append(calculateIndex + 1)
         scroll(to: calculateIndex, of: chatView)
         print(calculateIndex)
-        if content.count < calculateIndex + 1 {
-            chatView.reloadRows(at: [IndexPath(row: calculateIndex, section: 0)], with: .automatic)
-        } else {
-            chatView.reloadRows(at: [IndexPath(row: calculateIndex, section: 0), IndexPath(row: calculateIndex + 1, section: 0)], with: .automatic)
-        }
+//        if content.count < calculateIndex + 1 {
+//            chatView.reloadRows(at: [IndexPath(row: calculateIndex, section: 0)], with: .automatic)
+//        } else {
+//            chatView.reloadRows(at: [IndexPath(row: calculateIndex, section: 0), IndexPath(row: calculateIndex + 1, section: 0)], with: .automatic)
+//        }
+        chatView.reloadData()
     }
     @IBAction func searchText(_ sender: UIButton) {
         
@@ -123,6 +124,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         view.bringSubviewToFront(containChattingView)
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 25
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         content.count
     }
@@ -131,10 +136,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         // create a new cell if needed or reuse an old one
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.selectionStyle = .none
+        cell.textLabel?.textColor = UIColor.systemGray3
         if highlightIndex.contains(indexPath.row) {
-            cell.textLabel?.textColor = UIColor.white
+            cell.textLabel?.textColor = UIColor.black
         } else {
-            cell.textLabel?.textColor = UIColor.systemGray2
         }
         cell.textLabel?.text = content[indexPath.row]
         return cell
