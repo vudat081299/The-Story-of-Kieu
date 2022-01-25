@@ -19,7 +19,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zg5-Kp-h3l">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="799"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="EqR-oh-KvL">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="39"/>
@@ -35,6 +35,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="78J-UY-tQj" secondAttribute="bottom" id="EX0-Ph-2gl"/>
                                                 <constraint firstItem="78J-UY-tQj" firstAttribute="leading" secondItem="Tye-7X-Ioo" secondAttribute="leadingMargin" constant="10" id="QHe-T0-IhE"/>
@@ -42,6 +43,7 @@
                                                 <constraint firstItem="78J-UY-tQj" firstAttribute="top" secondItem="Tye-7X-Ioo" secondAttribute="topMargin" id="l9b-9C-CPt"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -138,9 +140,6 @@
     </scenes>
     <resources>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
