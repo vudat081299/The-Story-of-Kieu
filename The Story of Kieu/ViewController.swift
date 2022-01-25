@@ -147,7 +147,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        tableView.deselectRow(at: indexPath, animated: false)
         self.view.endEditing(true)
-        pasteboard.string = "\(content[indexPath.row])\n\(indexPath.row < content.count ? content[indexPath.row + 1] : "")"
+        
+        var calculateIndex = indexPath.row
+        if calculateIndex % 2 == 1 {
+            calculateIndex -= 1
+        }
+        pasteboard.string = "\(content[calculateIndex])\n\(calculateIndex < content.count ? content[calculateIndex + 1] : "")"
     }
     
     func scroll(to row: Int, of table: UITableView) {
