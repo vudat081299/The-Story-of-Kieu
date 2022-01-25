@@ -26,8 +26,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Variables.
     var keyboardHeight: CGFloat = 0.0
-    
-    
+    let pasteboard = UIPasteboard.general
     var highlightIndex: [Int] = []
     
     
@@ -77,7 +76,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         chatView.reloadData()
     }
     @IBAction func searchText(_ sender: UIButton) {
-        
+        chatTextField.text = ""
     }
     
 }
@@ -148,6 +147,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        tableView.deselectRow(at: indexPath, animated: false)
         self.view.endEditing(true)
+        pasteboard.string = "\(content[indexPath.row])\n\(indexPath.row < content.count ? content[indexPath.row + 1] : "")"
     }
     
     func scroll(to row: Int, of table: UITableView) {

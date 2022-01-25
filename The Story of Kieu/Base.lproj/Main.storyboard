@@ -61,7 +61,7 @@
                                             </constraints>
                                             <color key="tintColor" systemColor="systemGray2Color"/>
                                             <state key="normal">
-                                                <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="large"/>
+                                                <imageReference key="image" image="delete.left.fill" catalog="system" symbolScale="large"/>
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
                                             </state>
                                             <userDefinedRuntimeAttributes>
@@ -139,7 +139,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="delete.left.fill" catalog="system" width="128" height="104"/>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
