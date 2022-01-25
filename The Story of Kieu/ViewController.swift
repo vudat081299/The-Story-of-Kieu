@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     // Views.
     @IBOutlet weak var containChattingView: UIVisualEffectView!
     
+    @IBOutlet weak var utillizeButton: UIButton!
     @IBOutlet weak var chatView: UITableView!
     @IBOutlet weak var chatTextField: UITextField!
     
@@ -153,6 +154,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             calculateIndex -= 1
         }
         pasteboard.string = "\(content[calculateIndex])\n\(calculateIndex < content.count ? content[calculateIndex + 1] : "")"
+        
+        SoundFeedBack.success()
+        DispatchQueue.main.async {
+            self.utillizeButton.tintColor = .systemGreen
+            self.utillizeButton.setImage(UIImage(systemName: "rectangle.on.rectangle"), for: .normal)
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.utillizeButton.tintColor = .systemGray
+            self.utillizeButton.setImage(UIImage(systemName: "delete.left.fill"), for: .normal)
+        }
     }
     
     func scroll(to row: Int, of table: UITableView) {

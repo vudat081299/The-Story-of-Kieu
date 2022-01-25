@@ -59,7 +59,7 @@
                                                 <constraint firstAttribute="width" constant="50" id="j0p-T0-QGM"/>
                                                 <constraint firstAttribute="height" constant="50" id="t4k-67-eaZ"/>
                                             </constraints>
-                                            <color key="tintColor" systemColor="systemGray2Color"/>
+                                            <color key="tintColor" systemColor="systemGrayColor"/>
                                             <state key="normal">
                                                 <imageReference key="image" image="delete.left.fill" catalog="system" symbolScale="large"/>
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
@@ -131,6 +131,7 @@
                         <outlet property="chatView" destination="zg5-Kp-h3l" id="pfQ-sj-U8d"/>
                         <outlet property="containChattingView" destination="tbu-UD-QeU" id="JMK-tA-GgO"/>
                         <outlet property="leadingOfTextFieldCS" destination="7KU-Fe-ZOE" id="7Fn-aO-4Ko"/>
+                        <outlet property="utillizeButton" destination="P0y-ue-P28" id="uvA-QH-hUQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ne-vd-2fm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -140,14 +141,14 @@
     </scenes>
     <resources>
         <image name="delete.left.fill" catalog="system" width="128" height="104"/>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
