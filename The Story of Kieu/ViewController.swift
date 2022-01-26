@@ -3451,7 +3451,7 @@ let content =
     "Bắt phong trần phải phong trần,",
     "Cho thanh cao mới được phần thanh cao.",
     "3245. Có đâu thiên vị người nào,",
-    "Chữ tài chữ mệnh dồi dào cả hai,",
+    "Chữ tài chữ mệnh dồi dào cả hai.",
     "Có tài mà cậy chi tài,",
     "Chữ tài liền với chữ tai một vần.",
     "Đã mang lấy nghiệp vào thân,",
